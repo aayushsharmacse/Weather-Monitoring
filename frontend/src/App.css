@@ -1,0 +1,36 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: rgb(127, 186, 235);
+    color: rgb(8, 61, 107);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.complete{
+    height: 100vh;
+    width: 100vw;
+}
+.completewidth{
+    width: 100%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbycolumn{
+    flex-direction: column;
+}
+.flexbyrow{
+    flex-direction: row;
+}
+.spacearound{
+    justify-content: space-around;
+}
+.flex1{
+    flex:1;
+}
+.flex1_2{
+    flex:1.2;
+}
