@@ -77,7 +77,8 @@ const fetchWeatherData=async()=>{
 io.emit('weatherUpdate', myData);
 }
 // cron.schedule('* * * * * *',fetchWeatherData);
-cron.schedule('*/1 * * * *', fetchWeatherData)
+// cron.schedule('*/1 * * * *', fetchWeatherData)
+cron.schedule('*/5 * * * *', fetchWeatherData);
 app.use(errHandlerMiddleware)
 app.use(notfountMiddleware)
 export default server;

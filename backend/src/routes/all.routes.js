@@ -4,7 +4,7 @@ import {getWeatherData} from "../controllers/fetchweather.controller.js"
 
 const allRouter=express.Router()
 
-allRouter.get("/",getWeatherData)
+allRouter.get("/:city",getWeatherData)
 
 
 export default allRouter;

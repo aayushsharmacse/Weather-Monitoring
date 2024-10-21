@@ -31,6 +31,22 @@
 .flex1{
     flex:1;
 }
-.flex1_2{
-    flex:1.2;
+.flex4{
+    flex:4;
+}
+.citydropdown{
+    position: absolute;
+    top:2em;
+    left: 5em;
+}
+.tempdropdown{
+    position: absolute;
+    top:2em;
+    right: 5em;
+}
+#cityDropdown,#tempDropdown{
+    border-style: none;
+}
+#cityDropdown:focus, #tempDropdown{
+    outline: none;
 }
