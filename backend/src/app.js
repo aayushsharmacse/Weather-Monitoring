@@ -57,7 +57,7 @@ const fetchWeatherData=async()=>{
             dateCityData.minYet=Math.min(dateCityData.minYet,temp);
             const {tempCnt:ptc,avgValue:pav}=dateCityData.avgYet;
             dateCityData.avgYet={tempCnt:ptc+1,avgValue:((pav*ptc+temp)/(ptc+1))};
-            console.log("dateCityData.weatherConditionCnt[main]=",dateCityData.weatherConditionCnt[main]);
+            // console.log("dateCityData.weatherConditionCnt[main]=",dateCityData.weatherConditionCnt[main]);
             if(dateCityData.weatherConditionCnt[main]){
                 dateCityData.weatherConditionCnt=
                 {...dateCityData.weatherConditionCnt,[main]:dateCityData.weatherConditionCnt[main]+1};
@@ -65,7 +65,7 @@ const fetchWeatherData=async()=>{
             else{
                 dateCityData.weatherConditionCnt={...dateCityData.weatherConditionCnt,[main]:1};
             }
-            console.log("dateCityData.weatherConditionCnt[main]",dateCityData.weatherConditionCnt[main]);
+            // console.log("dateCityData.weatherConditionCnt[main]",dateCityData.weatherConditionCnt[main]);
             dateCityData.lastUpdate=response.data;
             await dateCityData.save();
         }

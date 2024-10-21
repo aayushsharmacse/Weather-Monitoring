@@ -4,7 +4,7 @@ import { io } from 'socket.io-client';
 import TemperatureChart from './TemperatureChart';
 import axios from 'axios';
 import convert from './convert';
-const socket = io('https://fluffy-fiesta-gg7xwq99x47hv5gv-4000.app.github.dev');
+const socket = io('https://weather-monitoring-dj7f.onrender.com');
 // console.log("Entered app.js")
 function App() {
   // console.log("Entered app.js ka function")
@@ -33,7 +33,7 @@ function App() {
     const func=async()=>{
       try{
         // console.log("Fetching data")
-        const data=await axios.get(`https://fluffy-fiesta-gg7xwq99x47hv5gv-4000.app.github.dev/api/v1/${city}`);
+        const data=await axios.get(`https://weather-monitoring-dj7f.onrender.com/api/v1/${city}`);
         // console.log(data.data);
         setDataReceived(data.data);
       }
