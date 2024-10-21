@@ -4,7 +4,7 @@ import { io } from 'socket.io-client';
 import TemperatureChart from './TemperatureChart';
 import axios from 'axios';
 import convert from './convert';
-const socket = io('https://weather-monitoring-dj7f.onrender.com');
+const socket = io('https://weather-monitoring-46qr.onrender.com');
 // console.log("Entered app.js")
 function App() {
   // console.log("Entered app.js ka function")
@@ -33,7 +33,7 @@ function App() {
     const func=async()=>{
       try{
         // console.log("Fetching data")
-        const data=await axios.get(`https://weather-monitoring-dj7f.onrender.com/api/v1/${city}`);
+        const data=await axios.get(`https://weather-monitoring-46qr.onrender.com/api/v1/${city}`);
         // console.log(data.data);
         setDataReceived(data.data);
       }
@@ -81,11 +81,8 @@ function App() {
       <div>
         <h3 className='center'>Current details</h3>
         <table>
-          {/* {console.log("dataReceived[i]?.lastUpdate?.main",dataReceived[i]?.lastUpdate?.main)}     */}
           {dataReceived && dataReceived[i]?.lastUpdate?.main && Object.entries(dataReceived[i]?.lastUpdate?.main)
           .map(([key,value],index)=>{ 
-        // {console.log("key,value",[key,value])}    
-        
         return (<tbody key={index}>
             <tr>
               {(key==='temp' || key==='feels_like' || key==='temp_min' || key==='temp_max')?
