@@ -51,21 +51,25 @@ const fetchWeatherData=async()=>{
             );
         }
         else{
+            console.log("main=",main);
             dateCityData.temperatures.push(temp);
             dateCityData.maxYet=Math.max(dateCityData.maxYet,temp);
             dateCityData.minYet=Math.min(dateCityData.minYet,temp);
             const {tempCnt:ptc,avgValue:pav}=dateCityData.avgYet;
             dateCityData.avgYet={tempCnt:ptc+1,avgValue:((pav*ptc+temp)/(ptc+1))};
+            console.log("dateCityData.weatherConditionCnt[main]=",dateCityData.weatherConditionCnt[main]);
             if(dateCityData.weatherConditionCnt[main]){
-                dateCityData.weatherConditionCnt[main]++;
+                dateCityData.weatherConditionCnt=
+                {...dateCityData.weatherConditionCnt,[main]:dateCityData.weatherConditionCnt[main]+1};
             }
             else{
-                dateCityData.weatherConditionCnt[main]=1;
+                dateCityData.weatherConditionCnt={...dateCityData.weatherConditionCnt,[main]:1};
             }
+            console.log("dateCityData.weatherConditionCnt[main]",dateCityData.weatherConditionCnt[main]);
             dateCityData.lastUpdate=response.data;
             await dateCityData.save();
         }
-        console.log("sending ",dateCityData)
+        // console.log("sending ",dateCityData)
         myData.push(dateCityData);
         console.log("emitted")
     }
