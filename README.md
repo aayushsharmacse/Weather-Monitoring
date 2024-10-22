@@ -8,6 +8,8 @@ The system should continuously call the OpenWeatherMap API at a configurable int
 (e.g., every 5 minutes) to retrieve real-time weather data for the metros in India. (Delhi,
 Mumbai, Chennai, Bangalore, Kolkata, Hyderabad)
 
+## [ Please continuously monitor console for progress and the final result will also be declared by alert wait for it]
+
 ## Working:
 ![image](https://github.com/user-attachments/assets/3ea37f9b-9881-47d5-9a72-d63ff1164122)
 ![image](https://github.com/user-attachments/assets/a787460f-58a6-4c8b-aab0-9ea2e51fbcd8)
